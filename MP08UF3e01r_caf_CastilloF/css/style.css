@@ -1,0 +1,384 @@
+/* `XHTML, HTML4, HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+dialog,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+font,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+main,
+mark,
+menu,
+meter,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+progress,
+q,
+rp,
+rt,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video,
+xmp {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+/*
+  Override the default (display: inline) for
+  browsers that do not recognize HTML5 tags.
+
+  IE8 (and lower) requires a shiv:
+  http://ejohn.org/blog/html5-shiv
+*/
+  display: block;
+}
+
+b,
+strong {
+/*
+  Makes browsers agree.
+  IE + Opera = font-weight: bold.
+  Gecko + WebKit = font-weight: bolder.
+*/
+  font-weight: bold;
+}
+
+img {
+  color: transparent;
+  font-size: 0;
+  vertical-align: middle;
+/*
+  For IE.
+  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+  -ms-interpolation-mode: bicubic;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+/*
+  For IE6 + IE7:
+
+  "display: list-item" keeps bullets from
+  disappearing if hasLayout is triggered.
+*/
+  display: list-item;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td,
+caption {
+  font-weight: normal;
+  vertical-align: top;
+  text-align: left;
+}
+
+q {
+  quotes: none;
+}
+
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+sub,
+sup,
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+svg {
+/*
+  For IE9. Without, occasionally draws shapes
+  outside the boundaries of <svg> rectangle.
+*/
+  overflow: hidden;
+}
+
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../carsandfilms/img/fons.jpg);
+}
+
+.cap  {
+  height: 589px;
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  line-height: 2rem;
+  padding-top: 2rem;
+}
+
+.gray-text {
+  color: gray;
+}
+
+.coches{
+  height: 450px;
+  width: 800px;
+  background-color: ;
+  margin: 0 auto;
+  position: absolute;
+  top: 60px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  background-image: url(../carsandfilms/img/ani/back.png);
+  background-size: cover;
+  animation: cambio 150s infinite;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 20px; /* Espacio entre los cuadrados */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover {
+  opacity: 1;
+  animation: spin 0.3s linear 1;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+
+.peu  {
+  height: 220px;
+  background-color: transparent;
+}
+
+.logo {
+  background-color: transparent;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  background-image: url(../carsandfilms/img/logo_carsandfilms.png);
+}
+
+
+@keyframes cambio {
+  0%{ background-image: url(../carsandfilms/img/ani/back.png);}
+  10%{ background-image: url(../carsandfilms/img/ani/bean.png);}
+  20%{ background-image: url(../carsandfilms/img/ani/bond.png);}
+  30%{ background-image: url(../carsandfilms/img/ani/break.png);}
+  40%{ background-image: url(../carsandfilms/img/ani/ghost.png);}
+  50%{ background-image: url(../carsandfilms/img/ani/pulp.png);}
+  60%{ background-image: url(../carsandfilms/img/ani/rider.png);}
+  70%{ background-image: url(../carsandfilms/img/ani/taxi.png);}
+  80%{ background-image: url(../carsandfilms/img/ani/team.png);}
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 940px) {
+/* Ajustes responsivos */
+
+/* Galería en una sola columna para pantallas menores a 940px */
+@media (max-width: 940px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 10px; /* Menor espacio entre elementos */
+  }
+
+  /* Ajustar el contenedor de coches */
+  .coches {
+    width: 100%; /* Ancho completo */
+    height: 300px; /* Reducir altura */
+    top: auto;
+    bottom: auto;
+    position: relative; /* Quitar posición absoluta */
+  }
+
+  /* Ajustar el título */
+  h1 {
+    font-size: 3rem; /* Reducir tamaño de fuente */
+    line-height: 1.5rem;
+  }
+
+  /* Ajustar el pie de página */
+  .peu {
+    height: 150px; /* Reducir altura */
+  }
+
+  .logo {
+    height: 150px; /* Ajustar tamaño del logo */
+    width: 150px;
+  }
+}
+
+/* Galería en dos columnas para pantallas medianas (941px - 1200px) */
+@media (max-width: 1200px) and (min-width: 941px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coches {
+    width: 90%; /* Ajustar ancho */
+  }
+}
+
+/* Ajuste del contenedor principal */
+body {
+  background: url(../carsandfilms/img/fons.jpg) no-repeat center center/cover;
+}
+
+/* Mejorar accesibilidad y visibilidad */
+.caption {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+}
